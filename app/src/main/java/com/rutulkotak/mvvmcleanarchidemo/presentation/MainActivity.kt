@@ -40,6 +40,7 @@ class MainActivity : AppCompatActivity() {
 
         movieViewModel.getMovies().observe(this) {
             Log.d(TAG, it.toString())
+            Log.d(TAG, it?.count().toString())
         }
     }
 }
