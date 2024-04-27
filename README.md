@@ -1,1 +1,1 @@
-![MVVM_Clean_Architecture_Flow](https://github.com/rutulkotak/MVVMCleanArchitectureDemo/assets/3943212/c8d081c9-cb5b-40c9-9bdb-3f8c55862fd5)
+![Github_MVVM_Clean_Architecture_Flow](https://github.com/rutulkotak/MVVMCleanArchitectureDemo/assets/3943212/41510971-54af-4260-85db-22d7ea9d8b64)
