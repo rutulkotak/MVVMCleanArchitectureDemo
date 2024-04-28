@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
     alias(libs.plugins.kotlin.kapt)
+    alias(libs.plugins.google.ksp)
 }
 
 android {
@@ -56,7 +57,7 @@ dependencies {
     implementation(libs.room.ktx)
     implementation(libs.room.runtime)
     implementation(libs.androidx.junit.ktx)
-    kapt(libs.room.compiler)
+    ksp(libs.room.compiler)
     // Coroutines
     implementation(libs.coroutines)
     // Dagger
