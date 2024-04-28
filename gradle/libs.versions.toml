@@ -14,14 +14,16 @@ room_version = "2.6.1"
 retrofit_version = "2.9.0"
 okhttp3 = "5.0.0-alpha.6"
 coroutines = "1.8.0"
+coroutines_test = "1.8.1-Beta"
 dagger_version = "2.51.1"
 glide_version = "4.16.0"
+arch_core="2.2.0"
+truth="1.0.1"
+junitKtx = "1.1.5"
+robolectric="4.12"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
-junit = { group = "junit", name = "junit", version.ref = "junit" }
-androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
-androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
@@ -47,6 +49,15 @@ dagger-compiler = { group="com.google.dagger", name="dagger-compiler", version.r
 # Glide
 glide = { group="com.github.bumptech.glide", name="glide", version.ref="glide_version" }
 glide-compiler = { group="com.github.bumptech.glide", name="compiler", version.ref="glide_version" }
+# Test
+junit_test = { group = "junit", name = "junit", version.ref = "junit" }
+arch-core-test = { group = "androidx.arch.core", name = "core-testing", version.ref = "arch_core" }
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+coroutine-test = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "coroutines_test" }
+google-truth = { group = "com.google.truth", name = "truth", version.ref = "truth" }
+androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+androidx-junit-ktx = { group = "androidx.test.ext", name = "junit-ktx", version.ref = "junitKtx" }
+robolectric = { group = "org.robolectric", name = "robolectric", version.ref = "robolectric" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }

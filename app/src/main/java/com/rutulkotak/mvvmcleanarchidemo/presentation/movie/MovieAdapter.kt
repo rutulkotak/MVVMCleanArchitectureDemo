@@ -2,6 +2,7 @@ package com.rutulkotak.mvvmcleanarchidemo.presentation.movie
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.rutulkotak.mvvmcleanarchidemo.R
@@ -36,5 +37,6 @@ class MovieViewHolder(private val binding: MovieListItemBinding) : RecyclerView.
     fun bind(movie: Movie) {
         binding.titleTextView.text = movie.title
         binding.descriptionTextView.text = movie.overview
+        binding.imageView.setImageDrawable(ContextCompat.getDrawable(binding.imageView.context, R.drawable.demo_movie_poster))
     }
 }

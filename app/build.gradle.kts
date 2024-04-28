@@ -34,8 +34,9 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
-    dataBinding {
-        enable = true
+    buildFeatures {
+        dataBinding = true
+        viewBinding = true
     }
 }
 
@@ -46,9 +47,6 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
     // Lifecycle
     implementation(libs.lifecycle.viewmodel.ktx)
     implementation(libs.lifecycle.viewmodel.savedstate)
@@ -57,6 +55,7 @@ dependencies {
     // Room
     implementation(libs.room.ktx)
     implementation(libs.room.runtime)
+    implementation(libs.androidx.junit.ktx)
     kapt(libs.room.compiler)
     // Coroutines
     implementation(libs.coroutines)
@@ -70,4 +69,18 @@ dependencies {
     // Glide
     implementation(libs.glide)
     annotationProcessor(libs.glide.compiler)
+    // Test
+    testImplementation(libs.junit.test)
+    testImplementation(libs.arch.core.test)
+    testImplementation(libs.coroutine.test)
+    testImplementation(libs.google.truth)
+    testImplementation(libs.androidx.junit)
+    testImplementation(libs.robolectric)
+    // Android Test
+    androidTestImplementation(libs.junit.test)
+    androidTestImplementation(libs.arch.core.test)
+    androidTestImplementation(libs.coroutine.test)
+    androidTestImplementation(libs.google.truth)
+    androidTestImplementation(libs.androidx.junit)
+    androidTestImplementation(libs.androidx.espresso.core)
 }
