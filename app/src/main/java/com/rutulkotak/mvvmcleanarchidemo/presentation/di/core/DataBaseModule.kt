@@ -1,21 +1,24 @@
 package com.rutulkotak.mvvmcleanarchidemo.presentation.di.core
 
-import android.content.Context
+import android.app.Application
 import androidx.room.Room
 import com.rutulkotak.mvvmcleanarchidemo.data.db.DemoAppDatabase
 import com.rutulkotak.mvvmcleanarchidemo.data.db.MovieDao
 import dagger.Module
 import dagger.Provides
+import dagger.hilt.InstallIn
+import dagger.hilt.components.SingletonComponent
 import javax.inject.Singleton
 
+@InstallIn(SingletonComponent::class)
 @Module
 class DataBaseModule {
 
     @Singleton
     @Provides
-    fun provideMovieDatabase(context: Context) : DemoAppDatabase {
+    fun provideMovieDatabase(app: Application) : DemoAppDatabase {
         return Room.databaseBuilder(
-            context,
+            app,
             DemoAppDatabase::class.java,
             "demodb"
         ).build()

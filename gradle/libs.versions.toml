@@ -16,12 +16,12 @@ retrofit_version = "2.9.0"
 okhttp3 = "5.0.0-alpha.6"
 coroutines = "1.8.0"
 coroutines_test = "1.8.1-Beta"
-dagger_version = "2.51.1"
 glide_version = "4.16.0"
 arch_core="2.2.0"
 truth="1.0.1"
 junitKtx = "1.1.5"
 robolectric="4.12"
+hilt="2.48"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -44,12 +44,12 @@ retrofit-converter-gson = { group="com.squareup.retrofit2", name="converter-gson
 retrofit-okhttp3 = { group="com.squareup.okhttp3", name="logging-interceptor", version.ref="okhttp3" }
 # Coroutines
 coroutines = { group="org.jetbrains.kotlinx", name="kotlinx-coroutines-android", version.ref="coroutines" }
-# Dagger
-dagger = { group="com.google.dagger", name="dagger", version.ref="dagger_version" }
-dagger-compiler = { group="com.google.dagger", name="dagger-compiler", version.ref="dagger_version" }
 # Glide
 glide = { group="com.github.bumptech.glide", name="glide", version.ref="glide_version" }
 glide-compiler = { group="com.github.bumptech.glide", name="compiler", version.ref="glide_version" }
+# Hilt
+dagger-hilt = { group="com.google.dagger", name="hilt-android", version.ref="hilt" }
+dagger-hilt-compiler = { group="com.google.dagger", name="hilt-android-compiler", version.ref="hilt" }
 # Test
 junit_test = { group = "junit", name = "junit", version.ref = "junit" }
 arch-core-test = { group = "androidx.arch.core", name = "core-testing", version.ref = "arch_core" }
@@ -65,3 +65,4 @@ androidApplication = { id = "com.android.application", version.ref = "agp" }
 jetbrainsKotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }
 google-ksp = { id="com.google.devtools.ksp", version.ref="ksp" }
+dagger-hilt = { id="com.google.dagger.hilt.android", version.ref="hilt" }

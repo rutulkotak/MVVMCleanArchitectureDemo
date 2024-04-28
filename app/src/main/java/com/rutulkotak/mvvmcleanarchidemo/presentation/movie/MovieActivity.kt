@@ -11,9 +11,10 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.rutulkotak.mvvmcleanarchidemo.R
 import com.rutulkotak.mvvmcleanarchidemo.databinding.ActivityMovieBinding
-import com.rutulkotak.mvvmcleanarchidemo.presentation.di.Injector
+import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
+@AndroidEntryPoint
 class MovieActivity : AppCompatActivity() {
 
     @Inject
@@ -39,7 +40,6 @@ class MovieActivity : AppCompatActivity() {
     }
 
     private fun setup() {
-        (application as Injector).createMovieSubComponent().inject(this)
         movieViewModel = ViewModelProvider(this, movieViewModelFactory)[MovieViewModel::class.java]
     }
 
