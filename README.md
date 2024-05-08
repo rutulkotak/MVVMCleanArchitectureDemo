@@ -7,7 +7,7 @@
 * Remote data source ( Retrofit )
 * DI
   - Dagger2 ( master branch )
-  - Hilt 9 ( using_hilt branch )
+  - Hilt ( using_hilt branch )
 * Android Test
   - DAO test
   - More to add
