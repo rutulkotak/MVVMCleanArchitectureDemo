@@ -12,11 +12,11 @@ class MovieRepositoryImpl(
     private val movieCacheDataSource: IMovieCacheDataSource
 ): IMovieRepository {
 
-    override suspend fun getMovies(): List<Movie>? {
+    override suspend fun getMovies(): List<Movie> {
         return getMoviesFromCache()
     }
 
-    override suspend fun updateMovies(): List<Movie>? {
+    override suspend fun updateMovies(): List<Movie> {
         val movieList = getMoviesFromAPI()
         movieLocalDataSource.clearAll()
         movieLocalDataSource.saveMoviesToDB(movieList)
@@ -53,10 +53,10 @@ class MovieRepositoryImpl(
         }
         */
 
-        return getModieList().toList()
+        return getMovieList().toList()
     }
 
-    private fun getModieList(): Collection<Movie> {
+    private fun getMovieList(): Collection<Movie> {
         val movieList = mutableListOf<Movie>()
         movieList.add(Movie(1, "overview-1", "PosterPath-1", "ReleaseDate-1", "Title-1"))
         movieList.add(Movie(2, "overview-2", "PosterPath-2", "ReleaseDate-2", "Title-2"))
